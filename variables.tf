@@ -50,3 +50,11 @@ variable "service_plan" {
   type      = string
   default = "es7-standard-3"
 }
+
+variable "elastic_options" {
+  description = "Options to pass when creating Elastic cluster"
+  type        = string
+  default     = <<EOF
+  {"EnableAPMServer": true}
+EOF
+}

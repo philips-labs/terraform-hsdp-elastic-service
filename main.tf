@@ -11,6 +11,7 @@ resource "cloudfoundry_service_instance" "elasticsearch" {
   space = var.cf_space_id
   //noinspection HILUnresolvedReference
   service_plan                   = data.cloudfoundry_service.elastic.service_plans[var.service_plan]
+  json_params  = var.elastic_options
 }
 
 resource "cloudfoundry_service_key" "key" {
